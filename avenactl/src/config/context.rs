@@ -11,8 +11,11 @@ pub struct Context {
 }
 
 impl Context {
-    pub fn new(name: String, connection: String) -> Self {
-        Self { name, connection }
+    pub fn new<S: Into<String>>(name: S, connection: S) -> Self {
+        Self {
+            name: name.into(),
+            connection: connection.into(),
+        }
     }
 }
 

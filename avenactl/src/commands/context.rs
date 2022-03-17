@@ -84,10 +84,8 @@ pub fn exec(cmd: ContextCommand) -> Result<()> {
         ContextCommands::Add { name, connection } => {
             let mut m = Manifest::open(CONFIG_PATH.to_path_buf())?;
 
-            m.get_table_mut("context").insert(
-                &name,
-                Context::new(name.to_owned(), connection.to_owned()).try_into()?,
-            );
+            m.get_table_mut("context")
+                .insert(&name, Context::new(&name, &connection).try_into()?);
 
             m.save()?;
         }
