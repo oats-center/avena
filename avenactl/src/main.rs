@@ -37,6 +37,7 @@ fn main() -> Result<()> {
     // Pass control the commanded subcommand
     match args.command {
         Commands::Context(context) => commands::context::exec(context),
+        Commands::Nodes(node) => commands::nodes::exec(node),
     }?;
 
     Ok(())
