@@ -15,7 +15,11 @@ pub struct Manifest {
 
 impl Manifest {
     pub fn open(path: PathBuf) -> Result<Self> {
-        let doc = read_to_string(&path)?.parse::<Document>()?;
+        let doc = if path.is_file() {
+            read_to_string(&path)?.parse::<Document>()?
+        } else {
+            Document::new()
+        };
 
         Ok(Self { path, doc })
     }
