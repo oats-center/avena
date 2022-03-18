@@ -38,13 +38,24 @@ impl Manifest {
         Ok(())
     }
 
-    pub fn get_table_mut(&mut self, name: &str) -> &mut Table {
-        self.doc
-            .as_table_mut()
+    pub fn get_table_mut(&mut self) -> &mut Table {
+        self.doc.as_table_mut()
+    }
+
+    pub fn get_section_mut(&mut self, name: &str) -> &mut Table {
+        let section = self
+            .get_table_mut()
             .entry(name)
             .or_insert_with(table)
             .as_table_mut()
-            .unwrap()
+            .unwrap();
+
+        if section.is_empty() {
+            // Default to implicit format
+            section.set_implicit(true);
+        }
+
+        section
     }
 }
 

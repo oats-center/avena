@@ -5,7 +5,7 @@ use comfy_table::{
     modifiers::UTF8_ROUND_CORNERS, presets::UTF8_FULL, Attribute, Cell, Color, Table,
 };
 
-use toml_edit::Entry;
+use toml_edit::{value, Entry};
 
 use crate::config::{Config, Context, Manifest};
 use crate::CONFIG_PATH;
@@ -73,9 +73,9 @@ pub fn exec(cmd: ContextCommand) -> Result<()> {
         ContextCommands::Rm { name } => {
             let mut m = Manifest::open(CONFIG_PATH.to_path_buf())?;
 
-            match m.get_table_mut("context").entry(&name) {
+            match m.get_section_mut("context").entry(&name) {
                 Entry::Occupied(context) => context.remove(),
-                Entry::Vacant(_) => return Err(eyre!("Context {name} not found.")),
+                Entry::Vacant(_) => return Err(eyre!("Context '{name}' not found.")),
             };
 
             m.save()?;
@@ -84,8 +84,14 @@ pub fn exec(cmd: ContextCommand) -> Result<()> {
         ContextCommands::Add { name, connection } => {
             let mut m = Manifest::open(CONFIG_PATH.to_path_buf())?;
 
-            m.get_table_mut("context")
-                .insert(&name, Context::new(&name, &connection).try_into()?);
+            let context = m.get_section_mut("context");
+
+            context.insert(&name, Context::new(&name, &connection).try_into()?);
+
+            // If the next context is the only context, then make it active
+            if context.len() == 1 {
+                m.get_table_mut().insert("active_context", value(name));
+            }
 
             m.save()?;
         }
