@@ -1,7 +1,9 @@
 mod commands;
 mod config;
 
+use avena::Avena;
 use clap::Parser;
+use config::Config;
 use std::path::PathBuf;
 
 use color_eyre::eyre::{eyre, Result};
@@ -34,10 +36,16 @@ fn main() -> Result<()> {
     // Parse CLI agruments
     let args = Cli::parse();
 
+    // Load Config
+    let config = Config::load(CONFIG_PATH.to_path_buf())?;
+
+    // Connect to Avena context
+    let a = Avena::connect(&config.get_active_context()?.connection);
+
     // Pass control the commanded subcommand
     match args.command {
         Commands::Context(context) => commands::context::exec(context),
-        Commands::Nodes(node) => commands::nodes::exec(node),
+        Commands::Devices(node) => commands::devices::exec(a, node),
     }?;
 
     Ok(())

@@ -1,0 +1,12 @@
+[package]
+name = "avena-agent"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+avena = { path = "../avena" }
+color-eyre = "0.6.1"
+crossbeam-channel = "0.5.4"
+nats = "0.18.1"
+serde = "1.0.136"
+serde_json = "1.0.79"

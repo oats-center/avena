@@ -1,14 +1,16 @@
 pub mod context;
-pub mod nodes;
+pub mod devices;
 
 use clap::Subcommand;
 
 use context::ContextCommand;
-use nodes::NodesCommand;
+use devices::DeviceCommand;
 
 #[derive(Subcommand, Debug)]
 pub enum Commands {
     /// Manage NATS contexts
     Context(ContextCommand),
-    Nodes(NodesCommand),
+
+    /// Manage Avena fleet devices
+    Devices(DeviceCommand),
 }

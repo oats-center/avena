@@ -1,0 +1,10 @@
+[package]
+name = "avena"
+version = "0.1.0"
+edition = "2021"
+authors = [ "Andrew Balmos <abalmos@purdue.edu>" ]
+
+[dependencies]
+nats = "0.18.1"
+serde = "1.0.136"
+serde_json = "1.0.79"

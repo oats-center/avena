@@ -52,7 +52,7 @@ pub fn exec(cmd: ContextCommand) -> Result<()> {
                 .set_content_arrangement(comfy_table::ContentArrangement::Dynamic)
                 .set_header(vec![
                     Cell::new("Name").add_attribute(Attribute::Bold),
-                    Cell::new("Connection String"),
+                    Cell::new("Connection String").add_attribute(Attribute::Bold),
                 ]);
 
             for (name, context) in config.context.into_iter() {
