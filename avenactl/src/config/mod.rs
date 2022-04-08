@@ -19,9 +19,12 @@ pub struct Config {
 
 impl Default for Config {
     fn default() -> Self {
+        let mut context = HashMap::new();
+        context.insert("localhost".to_owned(), Context::default());
+
         Self {
-            active_context: "locahost".to_owned(),
-            context: Default::default(),
+            active_context: "localhost".to_owned(),
+            context,
         }
     }
 }
