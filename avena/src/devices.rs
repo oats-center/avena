@@ -4,6 +4,8 @@ use crate::messages::{Device, PingRequest, PingResponse};
 
 use super::Avena;
 
+const KV_DEVICES: &str = "avena_devices";
+
 impl Avena {
     pub fn ping(&self, device: &str) -> PingResponse {
         let msg = self
@@ -15,16 +17,15 @@ impl Avena {
     }
 
     pub fn get_devices(&self) -> HashMap<String, Device> {
-        let context = nats::jetstream::new(self.nc.clone());
-
-        let kv = context.key_value("avena_devices").unwrap();
+        let kv = self.js.key_value(KV_DEVICES).unwrap();
 
         let mut devices = HashMap::new();
-
         for key in kv.keys().unwrap() {
-            let a = kv.get(&key).unwrap().unwrap();
+            let device = kv.get(&key).unwrap();
 
-            devices.insert(key, Device::try_from(a.as_slice()).unwrap());
+            if let Some(device) = device {
+                devices.insert(key, Device::try_from(device.as_slice()).unwrap());
+            }
         }
 
         devices

@@ -1,0 +1,12 @@
+[package]
+name = "avenad"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+color-eyre = "0.6.1"
+nats = "0.20.1"
+serde = "1.0.137"
+serde_json = "1.0.81"
+zbus = "2.2.0"
+zvariant = "3.2.1"
