@@ -1,12 +1,13 @@
 [workspace]
+resolver = "2"
 members = [
   # Libraries
   "avena",
 
   # Binaries
   "avenactl",
-  "avenad"
+  "avenad",
 ]
 
-[profile.dev.package.backtrace]
-opt-level = 3
+[patch.crates-io]
+jsonwebtoken = { git = "http://github.com/oats-center/jsonwebtoken" }

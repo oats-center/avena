@@ -1,9 +1,20 @@
-#[zbus::dbus_proxy(
+use zbus::proxy;
+
+#[proxy(
     interface = "org.freedesktop.systemd1.Service",
     default_service = "org.freedesktop.systemd1",
     default_path = "/org/freedesktop/systemd1"
 )]
 pub trait ServiceUnit {
+    #[dbus_proxy(property)]
+    fn id(&self) -> zbus::Result<String>;
+
+    #[dbus_proxy(property)]
+    fn active_state(&self) -> zbus::Result<String>;
+
+    #[dbus_proxy(property)]
+    fn need_daemon_reload(&self) -> zbus::Result<bool>;
+
     #[dbus_proxy(property, name = "Type")]
     fn service_type(&self) -> zbus::Result<String>;
 
