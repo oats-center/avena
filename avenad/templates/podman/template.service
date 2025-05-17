@@ -1,0 +1,19 @@
+[Unit]
+Description={{ description }}
+
+[Container]
+ContainerName={{ name }}
+Image={{ image }}:{{ tag }} 
+Exec={{ exec }}
+{% for port in ports -%}
+PublishPort={{port.inside}}:{{port.outside}}
+{% endfor -%}
+{% for bind in bind_mounts -%}
+Volume={{ bind.source }}:{{ bind.path }}
+{% endfor -%}
+{% for volume in volume_mounts -%}
+Volume={{ volume.name }}.volume:{{ volume.path }}
+{% endfor %}
+
+[Service]
+Restart=on-failure
