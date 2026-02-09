@@ -1,0 +1,14 @@
+[Unit]
+Description=Avena Device Daemon
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/avenad
+Restart=always
+RestartSec=5
+Environment=RUST_LOG=info
+Environment=AVENA_SKIP_LOCAL_NATS=0
+
+[Install]
+WantedBy=multi-user.target

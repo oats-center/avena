@@ -1,0 +1,27 @@
+[package]
+name = "avena-test"
+version = "0.1.0"
+edition = "2021"
+authors = ["Andrew Balmos <abalmos@purdue.edu>"]
+description = "Test harness for Avena distributed device management"
+
+[features]
+default = []
+chaos = ["dep:reqwest"]
+
+[dependencies]
+avena = { path = "../avena", features = ["test-utils"] }
+tokio = { workspace = true, features = ["full", "process"] }
+async-nats.workspace = true
+serde = { workspace = true, features = ["derive"] }
+serde_json.workspace = true
+futures.workspace = true
+tempfile.workspace = true
+tracing.workspace = true
+thiserror.workspace = true
+
+[dependencies.reqwest]
+version = "0.12"
+default-features = false
+features = ["json", "rustls-tls"]
+optional = true
