@@ -1,0 +1,236 @@
+[
+  {
+    "title": "Start here",
+    "collapsible": false,
+    "items": [
+      {
+        "title": "Overview",
+        "to": "/docs/"
+      },
+      {
+        "title": "Avena in five minutes",
+        "to": "/docs/getting-started/concepts/"
+      },
+      {
+        "title": "Install the avena CLI",
+        "to": "/docs/getting-started/install-cli/"
+      },
+      {
+        "title": "Quickstart: boot Avena in a VM",
+        "to": "/docs/getting-started/quickstart-vm/"
+      },
+      {
+        "title": "Connect to devices and fleets",
+        "to": "/docs/getting-started/targets/"
+      }
+    ]
+  },
+  {
+    "title": "Tutorials",
+    "collapsible": false,
+    "items": [
+      {
+        "title": "Tour a running device",
+        "to": "/docs/tutorials/01-tour/"
+      },
+      {
+        "title": "Deploy your first workload",
+        "to": "/docs/tutorials/02-first-workload/"
+      },
+      {
+        "title": "Build your own flavor",
+        "to": "/docs/tutorials/03-build-a-flavor/"
+      },
+      {
+        "title": "Safe updates with inhibitors",
+        "to": "/docs/tutorials/04-safe-updates/"
+      },
+      {
+        "title": "Break a release, watch it roll back",
+        "to": "/docs/tutorials/05-rollback/"
+      },
+      {
+        "title": "Fast development loops",
+        "to": "/docs/tutorials/06-dev-loop/"
+      },
+      {
+        "title": "Compose networking providers",
+        "to": "/docs/tutorials/07-networking/"
+      },
+      {
+        "title": "Use hardware from a workload",
+        "to": "/docs/tutorials/08-hardware/"
+      }
+    ]
+  },
+  {
+    "title": "Concepts",
+    "collapsible": true,
+    "items": [
+      {
+        "title": "Architecture overview",
+        "to": "/docs/concepts/architecture/"
+      },
+      {
+        "title": "Images and flavors",
+        "to": "/docs/concepts/images-and-flavors/"
+      },
+      {
+        "title": "Components and reconciliation",
+        "to": "/docs/concepts/components/"
+      },
+      {
+        "title": "Workloads",
+        "to": "/docs/concepts/workloads/"
+      },
+      {
+        "title": "Filesystem and state",
+        "to": "/docs/concepts/filesystem/"
+      },
+      {
+        "title": "Networking",
+        "to": "/docs/concepts/networking/"
+      },
+      {
+        "title": "Hardware",
+        "to": "/docs/concepts/hardware/"
+      },
+      {
+        "title": "Trellis control plane",
+        "to": "/docs/concepts/trellis/"
+      },
+      {
+        "title": "Updates and channels",
+        "to": "/docs/concepts/updates/"
+      },
+      {
+        "title": "Boot health and rollback",
+        "to": "/docs/concepts/health-and-rollback/"
+      },
+      {
+        "title": "Identity and provisioning",
+        "to": "/docs/concepts/identity/"
+      },
+      {
+        "title": "Development model",
+        "to": "/docs/concepts/development/"
+      },
+      {
+        "title": "Security model",
+        "to": "/docs/concepts/security/"
+      },
+      {
+        "title": "Design principles",
+        "to": "/docs/concepts/principles/"
+      }
+    ]
+  },
+  {
+    "title": "How-to guides",
+    "collapsible": true,
+    "items": [
+      {
+        "title": "Operate a fleet",
+        "to": "/docs/guides/fleet/"
+      },
+      {
+        "title": "Update devices with poor connectivity",
+        "to": "/docs/guides/offline-updates/"
+      },
+      {
+        "title": "Write flavor health checks",
+        "to": "/docs/guides/health-checks/"
+      },
+      {
+        "title": "Make data migrations rollback-safe",
+        "to": "/docs/guides/data-migrations/"
+      },
+      {
+        "title": "Host service or container?",
+        "to": "/docs/guides/host-vs-container/"
+      },
+      {
+        "title": "Release and promote a flavor",
+        "to": "/docs/guides/release-pipeline/"
+      },
+      {
+        "title": "Troubleshooting and diagnostics",
+        "to": "/docs/guides/troubleshooting/"
+      }
+    ]
+  },
+  {
+    "title": "Example flavors",
+    "collapsible": true,
+    "items": [
+      {
+        "title": "TSD",
+        "to": "/docs/flavors/tsd/"
+      },
+      {
+        "title": "ISOBlue",
+        "to": "/docs/flavors/isoblue/"
+      },
+      {
+        "title": "Roadside",
+        "to": "/docs/flavors/roadside/"
+      }
+    ]
+  },
+  {
+    "title": "Reference",
+    "collapsible": true,
+    "items": [
+      {
+        "title": "CLI",
+        "to": "/docs/reference/cli/"
+      },
+      {
+        "title": "flavor.toml",
+        "to": "/docs/reference/flavor-toml/"
+      },
+      {
+        "title": "workload.toml",
+        "to": "/docs/reference/workload-toml/"
+      },
+      {
+        "title": "Trellis services",
+        "to": "/docs/reference/trellis-services/"
+      },
+      {
+        "title": "Authorization scopes",
+        "to": "/docs/reference/authorization/"
+      },
+      {
+        "title": "State machines",
+        "to": "/docs/reference/states/"
+      },
+      {
+        "title": "Paths",
+        "to": "/docs/reference/paths/"
+      },
+      {
+        "title": "bootc interfaces",
+        "to": "/docs/reference/bootc/"
+      }
+    ]
+  },
+  {
+    "title": "Project",
+    "collapsible": true,
+    "items": [
+      {
+        "title": "Agent internals",
+        "to": "/docs/project/agent-internals/"
+      },
+      {
+        "title": "Repository layout",
+        "to": "/docs/project/repositories/"
+      },
+      {
+        "title": "Glossary",
+        "to": "/docs/project/glossary/"
+      }
+    ]
+  }
+]
