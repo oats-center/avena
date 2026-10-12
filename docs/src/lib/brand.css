@@ -1,0 +1,25 @@
+/* ─── Avena brand ───
+ * Signature: field green. Warm metal: oat gold. Motif: crop rows.
+ * See src/lib/family/README.md for the family rules. */
+
+:root {
+  --brand: #3f8a52;
+  --brand-deep: #2a6338;
+  --warm: #d9a441;
+  --warm-ink: #2b1f00;
+  --ink: #1a2a1f;
+  --on-ink: #eef6f0;
+  --on-ink-muted: #b9cdbf;
+  --console-bg: #0d1610;
+  --console-bar: #142219;
+  --console-line: #253a2c;
+  --console-text: #c9dccf;
+  --console-dim: #7f9a87;
+  --paper-dark: #0f1511;
+}
+
+/* The crop-rows motif, reused by the hero and closing panels */
+.motif-rows {
+  background-image:
+    repeating-linear-gradient(170deg, transparent 0 22px, color-mix(in srgb, var(--brand) 9%, transparent) 22px 23px);
+}

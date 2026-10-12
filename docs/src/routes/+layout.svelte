@@ -1,11 +1,13 @@
 <script>
   import '@fontsource-variable/bricolage-grotesque'
   import '@fontsource-variable/jetbrains-mono'
-  import '#lib/avena.css'
-  import DevBanner from '#lib/DevBanner.svelte'
+  import '#lib/family/family.css'
+  import '#lib/family/sveltepress.css'
+  import '#lib/brand.css'
+  import FamilyBar from '#lib/family/FamilyBar.svelte'
 
   const { children } = $props()
 </script>
 
-<DevBanner />
+<FamilyBar current="avena" note="in development" />
 {@render children?.()}

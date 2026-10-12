@@ -32,13 +32,13 @@
     font: 600 0.75rem var(--svp-code-font);
     text-transform: uppercase;
     letter-spacing: 0.14em;
-    color: var(--avena-gold);
+    color: var(--warm);
   }
   .eyebrow::before {
     content: '';
     width: 1.5rem;
     height: 2px;
-    background: var(--avena-gold);
+    background: var(--warm);
   }
   h2 {
     margin: 0.6rem 0 0.8rem;
@@ -59,10 +59,10 @@
     display: inline-block;
     margin-top: 1.1rem;
     font-weight: 600;
-    color: var(--avena-green);
+    color: var(--brand);
     text-decoration: none;
   }
-  .more:hover { color: var(--avena-gold); }
+  .more:hover { color: var(--warm); }
   .body { margin-top: 2.25rem; }
 
   @media (min-width: 960px) {

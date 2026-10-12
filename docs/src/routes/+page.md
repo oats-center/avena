@@ -14,7 +14,7 @@ layout: false
   import Closing from '#lib/landing/Closing.svelte'
 </script>
 
-<div class="avena-landing">
+<div class="family-page">
 
 <Hero />
 

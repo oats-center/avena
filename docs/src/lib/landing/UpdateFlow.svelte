@@ -37,7 +37,7 @@
       left: 1rem;
       right: 1rem;
       height: 2px;
-      background: linear-gradient(90deg, var(--avena-green), var(--avena-gold));
+      background: linear-gradient(90deg, var(--brand), var(--warm));
       opacity: 0.5;
     }
   }
@@ -51,11 +51,11 @@
     border-radius: 50%;
     font: 700 0.85rem var(--svp-code-font);
     color: #fff;
-    background: var(--avena-green);
-    box-shadow: 0 0 0 5px var(--avena-page-bg, #fbfaf5);
+    background: var(--brand);
+    box-shadow: 0 0 0 5px var(--paper);
   }
-  :global(html.dark) .dot { box-shadow: 0 0 0 5px #0f1511; }
-  .hold .dot { background: var(--avena-gold); color: #3d2c00; }
+  :global(html.dark) .dot { box-shadow: 0 0 0 5px var(--paper-dark); }
+  .hold .dot { background: var(--warm); color: var(--warm-ink); }
   .done .dot { background: #2f9e57; }
   .state {
     display: block;
@@ -64,6 +64,6 @@
     font-weight: 600;
     font-family: var(--svp-code-font);
   }
-  .hold .state { color: var(--avena-gold); }
+  .hold .state { color: var(--warm); }
   p { margin: 0.35rem 0 0; font-size: 0.9rem; line-height: 1.55; color: color-mix(in srgb, currentColor 68%, transparent); }
 </style>

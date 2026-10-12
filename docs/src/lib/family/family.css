@@ -1,0 +1,45 @@
+/* ─── OATS family layer ───────────────────────────────────────────────
+ * Shared by every OATS project site (Avena, avena-net, Trellis, wattdog).
+ * Copy this folder verbatim; put per-site choices in that site's brand.css.
+ * Plain CSS custom properties: works with Sveltepress, Tailwind/daisyUI, or none.
+ * ──────────────────────────────────────────────────────────────────── */
+
+:root {
+  /* Family constants: never override these per site */
+  --paper: #fbfaf5;            /* warm page background, light mode */
+  --paper-dark: #0f1412;       /* page background, dark mode */
+  --family-bar-h: 34px;
+  --font-display: 'Bricolage Grotesque Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono Variable', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --radius-card: 1rem;
+  --radius-control: 0.6rem;
+
+  /* Brand slots: every site sets these in brand.css */
+  --brand: #3f8a52;            /* signature color: buttons, icons, links */
+  --brand-deep: #2a6338;       /* hover / pressed */
+  --warm: #d9a441;             /* warm metal: eyebrows, highlights, hover */
+  --warm-ink: #2b1f00;         /* text on --warm */
+  --ink: #1a2a1f;              /* brand-tinted near-black for dark panels */
+  --on-ink: #eef4f0;           /* text on --ink */
+  --on-ink-muted: #b6c6bc;     /* secondary text on --ink */
+  --console-bg: #0d1610;       /* terminal panels */
+  --console-bar: #142219;
+  --console-line: #253a2c;
+  --console-text: #c9dccf;
+  --console-dim: #7f9a87;
+}
+
+/* Display face for headings, on every site */
+h1, h2, h3 {
+  font-family: var(--font-display);
+  letter-spacing: -0.015em;
+}
+
+html:not(.dark) body { background-color: var(--paper); }
+html.dark body { background-color: var(--paper-dark); }
+
+/* Decorative backgrounds must never cause sideways scrolling */
+.family-page { overflow-x: clip; }
+
+/* Code shows exactly what to type: no `<=` → `≤` ligatures */
+code, pre, kbd { font-variant-ligatures: none; }

@@ -1,5 +1,6 @@
 <script>
   import { asset, resolve } from '$app/paths'
+  import FamilyFooter from '#lib/family/FamilyFooter.svelte'
 </script>
 
 <section class="cta">
@@ -13,18 +14,16 @@
   </div>
 </section>
 
-<footer class="foot">
-  <div class="brand">
-    <img src={asset('/logo.svg')} alt="" width="22" height="22" />
-    <span><strong>Avena</strong>, an <a href="https://github.com/oats-center">OATS Center</a> project</span>
-  </div>
-  <nav>
-    <a href={resolve('/docs/')}>Docs</a>
-    <a href={resolve('/docs/tutorials/01-tour/')}>Tutorials</a>
-    <a href={resolve('/docs/reference/cli/')}>CLI reference</a>
-    <a href="https://github.com/oats-center/avena">GitHub</a>
-  </nav>
-</footer>
+<FamilyFooter
+  current="avena"
+  logo={asset('/logo.svg')}
+  links={[
+    { label: 'Docs', href: resolve('/docs/') },
+    { label: 'Tutorials', href: resolve('/docs/tutorials/01-tour/') },
+    { label: 'CLI reference', href: resolve('/docs/reference/cli/') },
+    { label: 'GitHub', href: 'https://github.com/oats-center/avena' },
+  ]}
+/>
 
 <style>
   .cta { max-width: 76rem; margin: 6rem auto 0; padding: 0 1.5rem; }
@@ -33,42 +32,25 @@
     padding: 3.5rem 2rem;
     border-radius: 1.25rem;
     text-align: center;
-    color: #eef6f0;
+    color: var(--on-ink);
     background:
       repeating-linear-gradient(170deg, transparent 0 22px, rgb(255 255 255 / 0.04) 22px 23px),
-      radial-gradient(80% 120% at 85% 0%, rgb(217 164 65 / 0.35), transparent 60%),
-      var(--avena-soil);
+      radial-gradient(80% 120% at 85% 0%, color-mix(in srgb, var(--warm) 35%, transparent), transparent 60%),
+      var(--ink);
     overflow: hidden;
   }
   h2 { margin: 0; font-size: clamp(1.7rem, 3.5vw, 2.4rem); letter-spacing: -0.02em; border: 0; padding: 0; color: #fff; }
-  p { margin: 0.8rem auto 2rem; max-width: 34rem; color: #b9cdbf; font-size: 1.05rem; }
+  p { margin: 0.8rem auto 2rem; max-width: 34rem; color: var(--on-ink-muted); font-size: 1.05rem; }
   .actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; }
   .btn {
     padding: 0.7rem 1.3rem;
     border-radius: 0.6rem;
     font-weight: 600;
     text-decoration: none;
-    color: #eef6f0;
+    color: var(--on-ink);
     border: 1.5px solid rgb(255 255 255 / 0.25);
   }
-  .btn:hover { border-color: var(--avena-gold); }
-  .btn.primary { background: var(--avena-gold); border-color: var(--avena-gold); color: #2b1f00; }
-  .btn.primary:hover { background: #e8bd62; }
-
-  .foot {
-    max-width: 76rem;
-    margin: 4rem auto 0;
-    padding: 1.5rem 1.5rem 3rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 1rem;
-    font-size: 0.9rem;
-    border-top: 1px solid color-mix(in srgb, currentColor 10%, transparent);
-    color: color-mix(in srgb, currentColor 65%, transparent);
-  }
-  .brand { display: flex; align-items: center; gap: 0.6rem; }
-  .foot a { color: inherit; text-decoration: none; }
-  .foot a:hover { color: var(--avena-green); }
-  nav { display: flex; gap: 1.4rem; flex-wrap: wrap; }
+  .btn:hover { border-color: var(--warm); }
+  .btn.primary { background: var(--warm); border-color: var(--warm); color: var(--warm-ink); }
+  .btn.primary:hover { background: color-mix(in srgb, var(--warm) 85%, white); }
 </style>

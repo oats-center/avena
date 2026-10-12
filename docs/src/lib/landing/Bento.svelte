@@ -75,14 +75,14 @@
     border-radius: 1rem;
     text-decoration: none;
     color: inherit;
-    background: color-mix(in srgb, var(--avena-green) 5%, transparent);
-    border: 1px solid color-mix(in srgb, var(--avena-green) 18%, transparent);
+    background: color-mix(in srgb, var(--brand) 5%, transparent);
+    border: 1px solid color-mix(in srgb, var(--brand) 18%, transparent);
     transition: border-color 0.2s, background 0.2s;
     overflow: hidden;
   }
   .tile:hover {
-    border-color: var(--avena-green);
-    background: color-mix(in srgb, var(--avena-green) 9%, transparent);
+    border-color: var(--brand);
+    background: color-mix(in srgb, var(--brand) 9%, transparent);
   }
   .tile::after {
     content: '→';
@@ -90,14 +90,14 @@
     top: 1.3rem;
     right: 1.4rem;
     opacity: 0;
-    color: var(--avena-gold);
+    color: var(--warm);
     transition: opacity 0.2s, transform 0.2s;
   }
   .tile:hover::after { opacity: 1; transform: translateX(3px); }
   .tall {
     background:
-      linear-gradient(160deg, color-mix(in srgb, var(--avena-gold) 14%, transparent), transparent 60%),
-      color-mix(in srgb, var(--avena-green) 5%, transparent);
+      linear-gradient(160deg, color-mix(in srgb, var(--warm) 14%, transparent), transparent 60%),
+      color-mix(in srgb, var(--brand) 5%, transparent);
   }
   .icon {
     display: inline-flex;
@@ -106,7 +106,7 @@
     border-radius: 0.7rem;
     font-size: 1.4rem;
     color: #fff;
-    background: var(--avena-green);
+    background: var(--brand);
   }
   h3 { margin: 0.8rem 0 0; font-size: 1.2rem; font-weight: 650; }
   p { margin: 0; line-height: 1.6; font-size: 0.95rem; color: color-mix(in srgb, currentColor 70%, transparent); }

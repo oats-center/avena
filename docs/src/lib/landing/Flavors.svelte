@@ -35,9 +35,9 @@
     border: 1px solid color-mix(in srgb, currentColor 12%, transparent);
     transition: border-color 0.2s, transform 0.2s;
   }
-  .card:hover { border-color: var(--avena-gold); transform: translateY(-3px); }
+  .card:hover { border-color: var(--warm); transform: translateY(-3px); }
   .top { display: flex; justify-content: space-between; align-items: center; }
-  .icon { font-size: 2rem; color: var(--avena-gold); }
+  .icon { font-size: 2rem; color: var(--warm); }
   code { font-size: 0.72rem; opacity: 0.6; background: none; }
   h3 { margin: 1rem 0 0.4rem; font-size: 1.3rem; }
   p { margin: 0; flex: 1; line-height: 1.6; font-size: 0.95rem; color: color-mix(in srgb, currentColor 70%, transparent); }
@@ -47,7 +47,7 @@
     border-radius: 999px;
     font-size: 0.75rem;
     font-weight: 600;
-    color: var(--avena-green);
-    background: color-mix(in srgb, var(--avena-green) 12%, transparent);
+    color: var(--brand);
+    background: color-mix(in srgb, var(--brand) 12%, transparent);
   }
 </style>

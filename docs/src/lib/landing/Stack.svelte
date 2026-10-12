@@ -73,17 +73,17 @@
     cursor: default;
     outline: none;
     margin-inline: calc((3 - var(--i)) * 0.9rem);
-    background: color-mix(in srgb, var(--avena-green) calc(8% + var(--i) * 6%), transparent);
-    border: 1px solid color-mix(in srgb, var(--avena-green) 25%, transparent);
+    background: color-mix(in srgb, var(--brand) calc(8% + var(--i) * 6%), transparent);
+    border: 1px solid color-mix(in srgb, var(--brand) 25%, transparent);
     transform: rotateX(18deg);
     transition: transform 0.25s, background 0.25s, border-color 0.25s;
   }
   .stack li.on {
     transform: rotateX(0deg) scale(1.03);
-    border-color: var(--avena-gold);
-    background: color-mix(in srgb, var(--avena-gold) 16%, transparent);
+    border-color: var(--warm);
+    background: color-mix(in srgb, var(--warm) 16%, transparent);
   }
-  .name { font-family: var(--avena-display); font-weight: 650; font-size: 1.1rem; }
+  .name { font-family: var(--font-display); font-weight: 650; font-size: 1.1rem; }
   code {
     font-size: 0.75rem;
     opacity: 0.7;
@@ -94,9 +94,9 @@
   }
   .detail {
     padding: 1.5rem;
-    border-left: 3px solid var(--avena-gold);
+    border-left: 3px solid var(--warm);
   }
-  .step { margin: 0; font: 600 0.75rem var(--svp-code-font); color: var(--avena-gold); text-transform: uppercase; letter-spacing: 0.1em; }
+  .step { margin: 0; font: 600 0.75rem var(--svp-code-font); color: var(--warm); text-transform: uppercase; letter-spacing: 0.1em; }
   h3 { margin: 0.4rem 0 0.6rem; font-size: 1.5rem; }
   .detail p:last-child { margin: 0; line-height: 1.65; color: color-mix(in srgb, currentColor 72%, transparent); }
   @media (prefers-reduced-motion: reduce) {

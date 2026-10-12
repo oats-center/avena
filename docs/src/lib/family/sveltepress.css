@@ -1,0 +1,21 @@
+/* ─── OATS family: Sveltepress adapter ───
+ * Offsets the default theme's fixed chrome for the family bar and wires the family fonts.
+ * Only needed on Sveltepress sites. */
+
+:root { --svp-code-font: var(--font-mono); }
+
+.theme-default--page-layout h1,
+.theme-default--page-layout h2 { font-family: var(--font-display); }
+
+.header,
+.theme-default-sidebar,
+.toc { top: var(--family-bar-h) !important; }
+.navbar-mobile { top: calc(56px + var(--family-bar-h)) !important; }
+main { padding-top: calc(56px + var(--family-bar-h)) !important; }
+main.with-mobile-subnav { padding-top: calc(100px + var(--family-bar-h)) !important; }
+@media (min-width: 950px) {
+  .toc { top: calc(80px + var(--family-bar-h) + var(--svp-section-tabs-height, 0px)) !important; }
+  main, main.with-mobile-subnav {
+    padding-top: calc(73px + var(--family-bar-h) + var(--svp-section-tabs-height, 0px)) !important;
+  }
+}
