@@ -41,11 +41,13 @@
 
   <div class="copy">
     <p class="kicker"><span>bootc</span> + <span>systemd</span> + <span>Podman</span> + <span>Trellis</span></p>
-    <h1>One platform for every machine <em>in the field.</em></h1>
+    <h1>Avena</h1>
+    <p class="tagline">The operating platform for OATS edge systems.</p>
     <p class="lead">
-      Avena turns the Linux computers in trucks, tractors, and roadside cabinets into reproducible,
-      self-healing systems. They update atomically, roll back on their own when a release isn't
-      healthy, and are all controlled through one API.
+      Avena runs the Linux computers in survey trucks, tractors, and roadside cabinets from
+      bootc images. A reconciling agent keeps each machine in its declared state, applies
+      atomic updates under an update policy, rolls back releases that fail health checks, and
+      exposes everything through Trellis.
     </p>
     <div class="actions">
       <a class="btn primary" href={resolve('/docs/getting-started/quickstart-vm/')}>Get started <span aria-hidden="true">→</span></a>
@@ -73,7 +75,7 @@
 {/each}
 {pad('Update', 12)}{d.update[0]}
 {pad('', 12)}<span class={d.update[2]}>{d.update[1]}</span></pre>
-    <p class="caption">Same platform, three products. Pick a device.</p>
+    <p class="caption">Status output from three products on the same platform.</p>
   </div>
 </section>
 
@@ -112,17 +114,18 @@
 
   h1 {
     margin: 0;
-    font-size: clamp(2.6rem, 6vw, 4.4rem);
+    font-size: clamp(2.4rem, 5vw, 3.6rem);
     line-height: 1;
     font-weight: 750;
     letter-spacing: -0.035em;
   }
-  h1 em {
-    font-style: normal;
-    background: linear-gradient(100deg, var(--brand) 10%, var(--warm) 90%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+  .tagline {
+    margin: 0.6rem 0 0;
+    font-family: var(--font-display);
+    font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+    font-weight: 600;
+    line-height: 1.25;
+    color: color-mix(in srgb, currentColor 80%, transparent);
   }
 
   .lead {

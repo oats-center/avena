@@ -5,10 +5,10 @@
 
 <section class="cta">
   <div class="inner">
-    <h2>Boot Avena in a VM in ten minutes.</h2>
-    <p>Download the lab image, run a few commands, and watch the agent reconcile the machine.</p>
+    <h2>Next steps</h2>
+    <p>The VM quickstart boots the Avena lab image and walks through checking status and reconciling components with the <code>avena</code> CLI.</p>
     <div class="actions">
-      <a class="btn primary" href={resolve('/docs/getting-started/quickstart-vm/')}>Start the quickstart →</a>
+      <a class="btn primary" href={resolve('/docs/getting-started/quickstart-vm/')}>Quickstart →</a>
       <a class="btn" href={resolve('/docs/getting-started/concepts/')}>Avena in five minutes</a>
     </div>
   </div>

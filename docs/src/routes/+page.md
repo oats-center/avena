@@ -1,5 +1,5 @@
 ---
-title: The operating platform for edge systems
+title: Avena
 description: Avena is the operating platform for OATS edge systems. It provides image-based updates, automatic rollback, composable networking, and one control plane for trucks, tractors, and roadside units.
 layout: false
 ---
@@ -18,15 +18,15 @@ layout: false
 
 <Hero />
 
-<Section eyebrow="Why Avena" title="Field computers that look after themselves" lede="Edge devices live in difficult places: patchy connectivity, power cuts, and nobody on site. Avena builds on bootc, systemd, Podman, and Trellis and adds the policy layer these machines are missing.">
+<Section eyebrow="Features" title="What Avena does" lede="Edge devices often have intermittent connectivity, unplanned power loss, and no one on site. Avena builds on bootc, systemd, Podman, and Trellis, and adds update policy, health checks, and reconciliation.">
 <Bento />
 </Section>
 
-<Section eyebrow="How it works" title="Four layers, one contract" lede="The image defines what the machine is. The flavor declares what the product needs. The agent reconciles what should be running. Trellis is how the machine is controlled." link={{ to: '/docs/concepts/architecture/', label: 'Explore the architecture' }}>
+<Section eyebrow="Architecture" title="Layers" lede="The image defines what the machine is. The flavor declares what the product needs. The agent reconciles what should be running. Trellis is how the machine is controlled." link={{ to: '/docs/concepts/architecture/', label: 'Architecture overview' }}>
 <Stack />
 </Section>
 
-<Section split eyebrow="Declarative" title="A product is an image and a manifest" lede="Derive from the Avena base, add your drivers and services, and declare your components. The same image becomes the installer ISO, the VM image, and the over-the-air update." link={{ to: '/docs/tutorials/03-build-a-flavor/', label: 'Build your first flavor' }}>
+<Section split eyebrow="Flavors" title="Images and manifests" lede="A product is an image derived from the Avena base, with its drivers and services, plus a manifest of its components. The same image is used for the installer ISO, the VM image, and over-the-air updates." link={{ to: '/docs/tutorials/03-build-a-flavor/', label: 'Build a flavor' }}>
 <Tabs activeName="flavor.toml">
 <TabPanel name="flavor.toml">
 
@@ -92,11 +92,11 @@ http = "http://localhost:8080/healthz"
 </Tabs>
 </Section>
 
-<Section eyebrow="Policy-aware updates" title="Update the fleet without stopping the work" lede="Stage releases whenever there's bandwidth. Applications tell Avena when a reboot is unsafe, and the agent applies the update once it can. If a release isn't healthy, it rolls back on its own." link={{ to: '/docs/tutorials/04-safe-updates/', label: 'Walk through a safe update' }}>
+<Section eyebrow="Updates" title="Update lifecycle" lede="Releases are downloaded when bandwidth is available and applied later. Applications can block reboots while they work. After a reboot, the release must pass health checks or the device rolls back." link={{ to: '/docs/tutorials/04-safe-updates/', label: 'Safe updates tutorial' }}>
 <UpdateFlow />
 </Section>
 
-<Section split reverse eyebrow="For applications" title="Your code tells Avena when to wait" lede="Inhibitors are leases. Hold one while your app does critical work, such as recording a survey or flushing data. If your process dies, the lease expires on its own." link={{ to: '/docs/reference/trellis-services/', label: 'Trellis services reference' }}>
+<Section split reverse eyebrow="Applications" title="Reboot inhibitors" lede="Inhibitors are leases. An application holds one during critical work, such as recording a survey or flushing data. If the process dies, the lease expires." link={{ to: '/docs/reference/trellis-services/', label: 'Trellis services reference' }}>
 <Tabs activeName="Rust">
 <TabPanel name="Rust">
 
@@ -136,7 +136,7 @@ avena fleet list --flavor tsd --columns device,release,update
 </Tabs>
 </Section>
 
-<Section split eyebrow="Developer experience" title="Experiment freely. Get back with one command." lede="Production images are immutable, but development doesn't have to be slow. Overrides live in /run, so they disappear on reboot, and avena dev status always shows what you've changed." link={{ to: '/docs/tutorials/06-dev-loop/', label: 'See the development loops' }}>
+<Section split eyebrow="Development" title="Development overrides" lede="Production images are immutable. For development, overrides of host binaries and container images live in /run and are cleared on reboot. avena dev status lists the active overrides." link={{ to: '/docs/tutorials/06-dev-loop/', label: 'Development loops' }}>
 
 ```console
 $ cargo build -p avena-overlay
@@ -154,7 +154,7 @@ Rebooting into published Avena TSD 2026.10.3.
 
 </Section>
 
-<Section eyebrow="Built for the field" title="One platform, many products" lede="These aren't separate operating systems. They're flavors of Avena.">
+<Section eyebrow="Flavors" title="Products built on Avena" lede="Each product is a flavor of the same Avena base image.">
 <Flavors />
 </Section>
 
