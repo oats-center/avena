@@ -38,7 +38,7 @@ them in its own `brand.css`.
 | Site | Signature (`--brand`) | Warm metal (`--warm`) | Motif | Mark |
 |---|---|---|---|---|
 | **Avena** | field green `#3f8a52` | oat gold `#d9a441` | crop rows (one direction of parallel lines) | oat sprig |
-| **avena-net** | deep teal `#2a7f86` | oat gold `#d9a441` (inherited, since it's part of Avena) | crossed lattice (the mesh) | oat sprig with linked nodes |
+| **avena-net** | deep teal `#2a7f86` | signal coral `#e07a5f` | crossed lattice (the mesh) | five-node mesh |
 | **Trellis** | navy ink `#101828` | copper `#b86b35` | vertical trellis / diamond grid | trellis T (existing) |
 | **wattdog** | charcoal `#323536` | brass `#b28d45` | pulse waveform over field rows | dog + bolt (existing) |
 
@@ -51,8 +51,7 @@ Rules of thumb:
   highlights, hover states, and the primary call-to-action on dark panels.
 - Dark panels (`--ink`, `--console-*`) are tinted toward the signature color, not neutral gray.
 - Motifs are subtle (about 8–9% opacity) and live only in hero and closing panels.
-- Avena sub-projects (like avena-net) keep Avena's gold. Independent projects (Trellis, wattdog)
-  use their own warm metal.
+- Every project has its own warm accent. No two sites share a signature or a warm accent.
 
 ## Using the kit
 
