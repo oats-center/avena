@@ -39,11 +39,11 @@ them in its own `brand.css`.
 |---|---|---|---|---|
 | **Avena** | field green `#3f8a52` | oat gold `#d9a441` | crop rows (one direction of parallel lines) | oat sprig |
 | **avena-net** | deep teal `#2a7f86` | signal coral `#e07a5f` | crossed lattice (the mesh) | five-node mesh |
-| **Trellis** | navy ink `#101828` | copper `#b86b35` | vertical trellis / diamond grid | trellis T (existing) |
+| **Trellis** | bronze `#8a7550` | leaf olive `#6b6540` (leaf gold `#c2a86e` on dark panels) | climbing leaves on a lattice | leaf sprig |
 | **wattdog** | charcoal `#323536` | brass `#b28d45` | pulse waveform over field rows | dog + bolt (existing) |
 
 The family bar dot for each site uses its most recognizable color (`sites.js`): green, teal,
-copper, and brass.
+leaf, and brass.
 
 Rules of thumb:
 

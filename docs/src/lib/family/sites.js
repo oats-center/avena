@@ -3,7 +3,7 @@
 export const sites = [
   { id: 'avena', name: 'Avena', role: 'Edge platform', url: 'https://oats-center.github.io/avena/', color: '#4f9e63' },
   { id: 'avena-net', name: 'avena-net', role: 'Overlay network', url: 'https://oats-center.github.io/avena-net/', color: '#3a9aa2' },
-  { id: 'trellis', name: 'Trellis', role: 'Control plane', url: 'https://oats-center.github.io/trellis/', color: '#c97a42' },
+  { id: 'trellis', name: 'Trellis', role: 'Control plane', url: 'https://oats-center.github.io/trellis/', color: '#8e7f47' },
   { id: 'wattdog', name: 'wattdog', role: 'Power watchdog', url: 'https://oats-center.github.io/wattdog/', color: '#c4a05a' },
 ]
 
